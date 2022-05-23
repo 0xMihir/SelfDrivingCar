@@ -1,0 +1,6 @@
+.DS_Store
+training/data/
+training/raw/
+training/models/
+.ipynb_checkpoints
+__pycache__
