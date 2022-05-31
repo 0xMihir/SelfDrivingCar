@@ -3,7 +3,7 @@ import bluetooth
 import depthai as dai
 import os, sys
 from time import time
-sys.path.insert(1, os.path.join(sys.path[0], '..'))
+sys.path.insert(1, os.path.join(sys.path[0], ".."))
 import common.driving as driving
 
 # Codes
@@ -27,7 +27,7 @@ camRgb = pipeline.create(dai.node.ColorCamera)
 videoEnc = pipeline.create(dai.node.VideoEncoder)
 xout = pipeline.create(dai.node.XLinkOut)
 
-xout.setStreamName('video')
+xout.setStreamName("video")
 
 camRgb.setBoardSocket(dai.CameraBoardSocket.RGB)
 camRgb.setResolution(dai.ColorCameraProperties.SensorResolution.THE_1080_P)

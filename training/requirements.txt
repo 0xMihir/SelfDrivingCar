@@ -1,1 +1,4 @@
 ffmpeg-python
+openvino[tensorflow2]=2021.4.2
+blobconverter
+matplotlib
