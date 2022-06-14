@@ -4,3 +4,5 @@ training/raw/
 training/models/
 .ipynb_checkpoints
 __pycache__
+*.blob
+test.*

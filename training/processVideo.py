@@ -9,6 +9,7 @@ def process_video(start_time):
     print(f"raw/out_{start_time}.h265")
     stream = (ffmpeg
               .input(f"raw/out_{start_time}.h265")
+              .crop(0, 540, 1920,540)
               .output(f"raw/temp_{start_time}/%05d.jpg"))
     stream.run()
 
@@ -16,7 +17,7 @@ def process_video(start_time):
         lines = commandFile.readlines()
         for i in range(len(lines)):
             line = lines[i]
-            line = line[0:-1]
+            line = line.strip()
             if line in ["stop", "", "kill"]:
                 continue
             shutil.copyfile(f"raw/temp_{start_time}/{i:05}.jpg",
